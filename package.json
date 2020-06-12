@@ -1,0 +1,25 @@
+{
+  "name": "poc-appinsights",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SegersIan/poc-appinsights.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SegersIan/poc-appinsights/issues"
+  },
+  "homepage": "https://github.com/SegersIan/poc-appinsights#readme",
+  "dependencies": {
+    "applicationinsights": "^1.7.6",
+    "applicationinsights-native-metrics": "0.0.5",
+    "express": "^4.17.1"
+  }
+}
