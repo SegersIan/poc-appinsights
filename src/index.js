@@ -1,5 +1,6 @@
 const fs = require('fs');
 const express = require('express')
+const request = require('request');
 const appInsights = require('applicationinsights')
 const app = express()
 const port = 3000
@@ -35,6 +36,19 @@ app.get('/ping', async (req, res) => {
         console.error(e);
         res.statusCode(500).send(e.toString());
     }
+})
+
+app.get('/request', (req, res) => {
+    request({
+        method: "get",
+        url: "https://www.google.com"
+    }, (err) => {
+        if (err) {
+            res.send(err.toString);
+        } else {
+            res.send("done");
+        }
+    })
 })
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
